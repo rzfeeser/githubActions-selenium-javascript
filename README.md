@@ -6,7 +6,7 @@ Videos demonstrating using this GitHub Action are available on the author's [You
 
 - [GitHub Actions - JavaScript Selenium Testing]()
 
-If you found the video helpful, be sure to hit *like* and *subscribe* for weekly lessons from CodeWithFeeser.
+If you found the video helpful, be sure to hit **like** and **subscribe** for weekly lessons from CodeWithFeeser.
 
 
 ## How to Use This Repository
@@ -23,4 +23,4 @@ If you found the video helpful, be sure to hit *like* and *subscribe* for weekly
 
 
 ## Help & Training
-If you are looking for Ansible or automation training for GitHub Actions, I offer in person and online training solutions for individuals and groups. For more information, reach out via my [contact portal at IRIS7](https://iris7.com/contact) 
+Since 2010 I've been providing in person and online technical training solutions for large organizations and individuals. If you're looking for a training solution, reach out via my [contact portal at IRIS7](https://iris7.com/contact)
