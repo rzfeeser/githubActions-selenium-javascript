@@ -1,22 +1,22 @@
 # This workflow demonstrates provides GitHub instructions to run a Selenium test with all three browsers: Chrome, FireFox or Edge browser
 
-name: Selenium Test on All Browsers (Single Job)
+name: Selenium Test on All Browsers (Paralell Jobs)
 
 on:
   - workflow_dispatch   # when the user presses a button
 
 jobs:
   test:
-    name: Selenium Testing - Chrome, Firefox, Edge
+    name: Selenium Testing - ${{ matrix.browser }}
     runs-on: ubuntu-latest
 
     container:
       image: node:23
 
     strategy:
-      fail-fast: false
+      fail-fast: false                                          # ensures that all jobs within the matrix will complete their execution, regardless of individual job failures
       matrix:
-        browser: ['chrome', 'firefox', 'edge']                  # these are the names of the browsers to use
+        browser: ['chrome', 'firefox', 'edge']                  # strategy.matrix allows a single job definition to have multiple inputs
 
     services:
       selenium:
