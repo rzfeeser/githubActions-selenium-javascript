@@ -1,12 +1,12 @@
 # Overview
 Hey gang! Professor Feeser here. Today we're going to check out how to use GitHub Actions to run Selenium tests. This perticular repository uses JavaScript to power the testing, but the lessons here should be easily adapted to any language (such as Python). 
 
-## Demos
+## Video Demos
 Videos demonstrating using this GitHub Action are available on the author's [YouTube Channel @CodeWithFeeser](https://www.youtube.com/@CodeWithFeeser):  
 
 - [GitHub Actions - JavaScript Selenium Testing]()
 
-If you found the video helpful, be sure to hit **like** and **subscribe** for weekly lessons from CodeWithFeeser.
+If you found a video helpful, be sure to hit **like** and **subscribe** for weekly lessons from [YouTube Channel @CodeWithFeeser](https://www.youtube.com/@CodeWithFeeser)
 
 
 ## How to Use This Repository
