@@ -1,0 +1,54 @@
+# This workflow demonstrates provides GitHub instructions to run a Selenium test with either the Chrome, FireFox or Edge browser
+# Tests are dispatched as a single job with 5 steps
+
+name: Basic Selenium Test (Single Job)
+
+on:
+  workflow_dispatch:                                  # if a user presses a button
+    inputs:                                           # this defines github.event.inputs.browser
+      browser:
+        type: choice
+        description: Choose a browser to test with    # the user must decide which browser they would like to test with
+        required: true
+        options:
+          - chrome
+          - firefox
+          - edge
+
+jobs:
+  test:
+    name: Single Browser Selenium Test - ${{ github.event.inputs.browser }}
+    runs-on: ubuntu-latest
+
+    container:
+      image: node:23
+
+    services:
+      selenium:
+        image: selenium/standalone-${{ github.event.inputs.browser }}
+        options: --shm-size=2gb
+
+    steps:
+      # Step 1 - Copy the code into our Ubuntu Container
+      - uses: actions/checkout@v4
+
+      # Step 2 - Install common dependencies
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '23'
+          cache: 'npm'
+
+      # Step 3 - Perform a clean and reproducible installation of Node.js project dependencies
+      - run: npm ci
+
+      # Step 4 - Executes the script defined under the "test" property within the "scripts" object in a project's package.json file.
+      - run: npm run test
+        env:
+          BROWSER: ${{ github.event.inputs.browser }}
+
+      # Step 5 - Upload the screenshots as artifacts so we can view them
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: screenshots
+          path: screenshots/
