@@ -69,14 +69,19 @@ describe('search', async function () {
     // Our test definitions
     it('should search for "RZFeeser"', async function () {
         const content = await search('RZFeeser');
-        assert.isTrue(content.includes('www.rzfeeser.com'));
+        assert.isTrue(content.includes('rzfeeser.com'));
     });
 
-    it('should search for "Appium"', async function () {
-        const content = await search('Appium');
-        assert.isTrue(content.includes('appium.io'));
+    it('should search for "IRIS7"', async function () {
+        const content = await search('IRIS7');
+        assert.isTrue(content.includes('iri7.com'));
     });
 
+    it('should search for "Alta3"', async function () {
+        const content = await search('alta3 research');
+        assert.isTrue(content.includes('alta3.com'));
+    });
+    
     it('should search for "Mozilla"', async function () {
         const content = await search('Mozilla');
         assert.isTrue(content.includes('mozilla.org'));
