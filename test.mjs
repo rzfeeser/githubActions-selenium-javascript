@@ -67,9 +67,9 @@ describe('search', async function () {
     });
 
     // Our test definitions
-    it('should search for "Selenium dev"', async function () {
-        const content = await search('Selenium dev');
-        assert.isTrue(content.includes('www.selenium.dev'));
+    it('should search for "RZFeeser"', async function () {
+        const content = await search('RZFeeser');
+        assert.isTrue(content.includes('www.rzfeeser.com'));
     });
 
     it('should search for "Appium"', async function () {
