@@ -77,7 +77,7 @@ describe('search', async function () {
         assert.isTrue(content.includes('CodeWithFeeser'));
     });
 
-    it('should search for "Alta3"', async function () {
+    it('should search for "alta3 research"', async function () {
         const content = await search('alta3 research');
         assert.isTrue(content.includes('alta3.com'));
     });
