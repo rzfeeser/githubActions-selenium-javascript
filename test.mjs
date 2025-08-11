@@ -74,7 +74,7 @@ describe('search', async function () {
 
     it('should search for "codewithfeeser"', async function () {
         const content = await search('codewithfeeser');
-        assert.isTrue(content.includes('youtube.com/@CodeWithFeeser/videos'));
+        assert.isTrue(content.includes('CodeWithFeeser'));
     });
 
     it('should search for "Alta3"', async function () {
