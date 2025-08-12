@@ -4,7 +4,7 @@ Hey gang! Professor Feeser here. Today we're going to check out how to use GitHu
 ## Video Demos
 Videos demonstrating using this GitHub Action are available on the author's [YouTube Channel @CodeWithFeeser](https://www.youtube.com/@CodeWithFeeser):  
 
-- [GitHub Actions - JavaScript Selenium Testing]()
+- [GitHub Actions - JavaScript Selenium Testing](https://www.youtube.com/watch?v=pAUOxZIDwl0)
 
 If you found a video helpful, be sure to hit **like** and **subscribe** for weekly lessons from [YouTube Channel @CodeWithFeeser](https://www.youtube.com/@CodeWithFeeser)
 
