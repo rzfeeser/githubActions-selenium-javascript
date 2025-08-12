@@ -25,8 +25,10 @@ jobs:
 
     services:
       selenium:
-        image: selenium/standalone-${{ github.event.inputs.browser }}
-        options: --shm-size=2gb
+        image: selenium/standalone-${{ github.event.inputs.browser }}   # if you cannot pull from docker.io
+        options: --shm-size=2gb                                         # ask your team to put the selenium images
+                                                                        # in you organizations image repo
+                                                                        # update the image: path as necessary
 
     steps:
       # Step 1 - Copy the code into our Ubuntu Container
