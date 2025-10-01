@@ -14,8 +14,12 @@ describe('search', async function () {
     const search = async (term) => {
         // Automate DuckDuckGo search
         await driver.get('https://duckduckgo.com/');
+        // duckduckgo changes the name of the input box often
         const searchBox = await driver.findElement(
-            By.id('search_form_input_homepage'));
+            By.xpath("//*[contains(@id, 'search')]")
+        );
+        //const searchBox = await driver.findElement(
+        //    By.id('search_form_input_homepage'));
         await searchBox.sendKeys(term, Key.ENTER);
 
         // Wait until the result page is loaded
