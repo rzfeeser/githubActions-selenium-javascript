@@ -16,7 +16,7 @@ describe('search', async function () {
         await driver.get('https://duckduckgo.com/');
         // duckduckgo changes the name of the input box often
         const searchBox = await driver.findElement(
-            By.xpath("//*[contains(@id, 'search')]")
+            By.xpath("//*[contains(@id, 'searchbox')]")
         );
         //const searchBox = await driver.findElement(
         //    By.id('search_form_input_homepage'));
