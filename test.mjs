@@ -15,7 +15,7 @@ describe('search', async function () {
         // Automate DuckDuckGo search
         await driver.get('https://duckduckgo.com/');
         const searchBox = await driver.findElement(
-            By.id('searchbox_input'));
+            By.id('search_form_input_homepage'));
         await searchBox.sendKeys(term, Key.ENTER);
 
         // Wait until the result page is loaded
